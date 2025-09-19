@@ -15,13 +15,12 @@ python3 manage.py collectstatic --noinput
 
 # Create Superuser if it doesn't exist
 python3 manage.py shell -c "
-from django.contrib.auth.models import User;
+from apps.users.models import User;
 import os;
-username = os.getenv('SUPERUSER_USERNAME', 'admin');
 email = os.getenv('SUPERUSER_EMAIL', 'admin@test.com');
 password = os.getenv('SUPERUSER_PASSWORD', 'testing200');
-if not User.objects.filter(username=username).exists():
-    User.objects.create_superuser(username=username, email=email, password=password);
+if not User.objects.filter(email=email).exists():
+    User.objects.create_superuser(email=email, password=password);
 else:
     print('Superuser already exists');
 "
