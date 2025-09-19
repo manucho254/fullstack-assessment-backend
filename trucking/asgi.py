@@ -20,3 +20,4 @@ else:
 
 
 application = get_asgi_application()
+app = application

@@ -19,3 +19,4 @@ else:
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'trucking.settings.prod')
 
 application = get_wsgi_application()
+app = application
