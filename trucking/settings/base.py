@@ -26,7 +26,7 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -112,6 +112,8 @@ CORS_ALLOW_METHODS = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",
     "http://localhost:8080",
+    "https://fullstack-assessment-frontend-two.vercel.app",
+    "https://fullstack-assessment-backend.vercel.app",
 ]
 
 MIDDLEWARE = [
