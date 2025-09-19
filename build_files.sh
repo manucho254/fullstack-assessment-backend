@@ -8,9 +8,6 @@ pip3 install -r requirements.txt
 python3 manage.py makemigrations
 python3 manage.py migrate
 
-# Load services from JSON file
-python3 manage.py load_services
-
 python3 manage.py collectstatic --noinput
 
 # Create Superuser if it doesn't exist
